@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('destiny.jpg'); /* Add your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* Ensure the background stays fixed while scrolling */
+            color: #333; /* Default text color */
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555; /* Darker text color for headings */
+        }
+
+        .destination {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center; /* Center align the content */
+            transition: transform 0.3s ease; /* Add smooth transition effect */
+        }
+
+        .destination:hover {
+            transform: translateY(-5px); /* Move the destination card up slightly on hover */
+        }
+
+        .destination img {
+            max-width: 100%; /* Ensure images don't exceed their container */
+            border-radius: 8px; /* Rounded corners for images */
+            margin-bottom: 10px; /* Add space between image and title */
+        }
+
+        .destination h2 {
+            margin-top: 10px; /* Add some space between image and title */
+            font-size: 24px; /* Increase font size for titles */
+            color: #007bff; /* Primary color for titles */
+        }
+
+        .destination form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .destination label {
+            margin-bottom: 10px; /* Add space between label and input */
+            font-weight: bold; /* Make labels bold */
+        }
+
+        .destination input[type="number"] {
+            padding: 10px; /* Increase padding for input fields */
+            border: 1px solid #ccc; /* Add border to input fields */
+            border-radius: 5px; /* Rounded corners for input fields */
+            width: 100%; /* Make input fields fill their container */
+            margin-bottom: 10px; /* Add space between input field and button */
+            transition: border-color 0.3s ease; /* Add smooth transition effect */
+        }
+
+        .destination input[type="number"]:focus {
+            outline: none; /* Remove default focus outline */
+            border-color: #007bff; /* Change border color on focus */
+        }
+
+        .destination button {
+            padding: 12px; /* Increase padding for buttons */
+            background-color: #007bff; /* Primary color for buttons */
+            color: #fff; /* Text color for buttons */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s ease; /* Add smooth transition effect */
+            width: 100%; /* Make buttons fill their container */
+        }
+
+        .destination button:hover {
+            background-color: #0056b3; /* Darken button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Trip</h1>
+        <div class="destination">
+            <img src="img1 (3).jpg" width="350" alt="Australia">
+            <h2>Australia</h2>
+            <form action="book.php" method="post">
+                <label for="australia_guests">Number of Guests:</label>
+                <input type="number" id="australia_guests" name="australia_guests" min="1" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+        <div class="destination">
+            <img src="img2.jpg"  width="350" alt="New York">
+            <h2>New York</h2>
+            <form action="book.php" method="post">
+                <label for="newyork_guests">Number of Guests:</label>
+                <input type="number" id="newyork_guests" name="newyork_guests" min="1" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+        <div class="destination">
+            <img src="img3.jpg" width="350" alt="Thailand">
+            <h2>Thailand</h2>
+            <form action="book.php" method="post">
+                <label for="thailand_guests">Number of Guests:</label>
+                <input type="number" id="thailand_guests" name="thailand_guests" min="1" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
